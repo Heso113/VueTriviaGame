@@ -14,7 +14,7 @@ export default {
   data: () => ({
     fetchedTrivias: null,
     index: '0',
-    correctAnswers: '0'
+    correctAnswers: '0',
   }),
   mounted() {
     axios
@@ -37,7 +37,7 @@ export default {
       console.log(this.index);
     },
     testFunction: function() {
-      console.log('This is a test. Hello!');
+      this.$router.push('Score');
     }
   }
 }

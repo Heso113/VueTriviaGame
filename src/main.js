@@ -5,10 +5,24 @@ Vue.use(VueRouter);
 
 import Menu from './components/Menu.vue'
 import TriviaContainer from './components/TriviaContainer.vue'
+import Scorescreen from './components/Scorescreen.vue'
 
 const routes = [
-  { path: '/Menu', component: Menu },
-  { path: '/TriviaContainer', component: TriviaContainer }
+  { 
+    path: '/',
+    name: 'Menu', 
+    component: Menu 
+  },
+  { 
+    path: '/Game',
+    name: 'Game', 
+    component: TriviaContainer 
+  },
+  {
+    path: '/Score',
+    name: 'Scorescreen',
+    component: Scorescreen
+  }
 ]
 
 const router = new VueRouter({routes});

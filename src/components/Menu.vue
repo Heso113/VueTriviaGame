@@ -10,7 +10,7 @@ export default {
     name: 'Menu',
     methods: {
         startGame() {
-            this.$router.push('/TriviaContainer');
+            this.$router.push('Game');
             // this.$emit("start-game");
         }
     }

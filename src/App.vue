@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h3>Trivia Game</h3>
     <router-view></router-view>
   </div>
 </template>

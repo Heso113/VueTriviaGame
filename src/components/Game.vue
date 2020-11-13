@@ -21,8 +21,6 @@ export default {
       .then((response) => {
         this.fetchedTrivias = response.data.results;
         this.$store.commit("fillFetchedTrivias", this.fetchedTrivias);
-        console.log(this.$store.getters.fetchedTrivias);
-        console.log("Previous log was from the store!");
         this.$router.push("/Gameround");
       });
   },

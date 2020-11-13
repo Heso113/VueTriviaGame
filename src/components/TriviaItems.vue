@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="triviaBox">
         <h3>{{trivias[index].question}}</h3>
         <button v-on:click="nextTrivia(trivias[index].correct_answer)">{{trivias[index].correct_answer}}</button>
         <button v-on:click="nextTrivia(trivias[index].incorrect_answers[0])">{{trivias[index].incorrect_answers[0]}}</button>
@@ -20,7 +20,6 @@ export default {
             this.$emit("next-trivia", answer);
         }
     }
-
 }
 </script>
 
@@ -36,8 +35,14 @@ export default {
     }
     button {
         background-color: black;
-        color: red;
+        color: green;
         width: 200px;
         height: 50px;
+    }
+    body{
+        background-color: black;
+    }
+    #triviaBox {
+        color: green;
     }
 </style>

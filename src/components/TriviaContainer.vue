@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!-- <h3 v-if="fetchedTrivias">Completed trivias: {{getCompletedTriviaCount(fetchedTrivias)}}</h3> -->
-    <!-- <h3 v-if="currentTrivia">Trivia: {{currentTrivia}}</h3> -->
     <TriviaItems @next-trivia="nextTrivia" v-bind:trivias="fetchedTrivias" v-bind:index="index" />
   </div>
 </template>

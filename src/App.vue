@@ -1,16 +1,32 @@
 <template>
   <div id="app">
+    <div :is="currentComponent"></div>
+    
+    <Menu @start-game="startGame" />
     <TriviaContainer />
   </div>
 </template>
 
 <script>
 import TriviaContainer from './components/TriviaContainer.vue'
+import Menu from './components/Menu.vue'
 
 export default {
   name: 'App',
+  currentComponent: Menu,
+  componentArray: [Menu, TriviaContainer],
   components: {
-    TriviaContainer
+    Menu,
+    // TriviaContainer
+  },
+  methods: {
+    startGame: function() {
+
+      this.components = {TriviaContainer};
+      this.currentComponent = this.componentArray[1];
+      console.log("Game should start!");
+      console.log(this.components);
+    }
   }
 }
 </script>

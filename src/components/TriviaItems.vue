@@ -1,23 +1,23 @@
 <template>
   <div id="triviaBox">
-    <h3>{{ trivias[index].question }}</h3>
-    <button v-on:click="nextTrivia(trivias[index].correct_answer)">
-      {{ trivias[index].correct_answer }}
+    <h3>{{ trivias[index].trivia }}</h3>
+    <button v-on:click="nextTrivia(trivias[index].answers[0])">
+      {{ trivias[index].answers[0] }}
     </button>
-    <button v-on:click="nextTrivia(trivias[index].incorrect_answers[0])">
-      {{ trivias[index].incorrect_answers[0] }}
-    </button>
-    <button
-      v-if="trivias[index].type === 'multiple'"
-      v-on:click="nextTrivia(trivias[index].incorrect_answers[1])"
-    >
-      {{ trivias[index].incorrect_answers[1] }}
+    <button v-on:click="nextTrivia(trivias[index].answers[1])">
+      {{ trivias[index].answers[1] }}
     </button>
     <button
       v-if="trivias[index].type === 'multiple'"
-      v-on:click="nextTrivia(trivias[index].incorrect_answers[2])"
+      v-on:click="nextTrivia(trivias[index].answers[2])"
     >
-      {{ trivias[index].incorrect_answers[2] }}
+      {{ trivias[index].answers[2] }}
+    </button>
+    <button
+      v-if="trivias[index].type === 'multiple'"
+      v-on:click="nextTrivia(trivias[index].answers[3])"
+    >
+      {{ trivias[index].answers[3] }}
     </button>
   </div>
 </template>

@@ -55,7 +55,7 @@ export default {
       let index = 0;
       userAnswers.forEach((answer) => {
         if (answer === trivias[index].correct_answer) {
-          score += 100;
+          score += 10;
         }
         index++;
       });

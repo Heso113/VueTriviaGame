@@ -91,7 +91,8 @@ export default {
   table {
     border: solid 3px green;
     color: green;
-
+    margin-left: auto;
+    margin-right: auto;
   }
   th {
     border: solid 3px green;
